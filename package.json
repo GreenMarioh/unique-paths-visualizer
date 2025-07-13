@@ -7,11 +7,15 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+   "overrides": {
+    "rollup": "^4.0.0"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0"
   },
+
   "devDependencies": {
     "@vitejs/plugin-react": "^4.6.0",
     "autoprefixer": "^10.4.14",
