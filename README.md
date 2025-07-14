@@ -1,47 +1,76 @@
-# 🛤️ Unique Paths II Visualizer
+# 🧽 Unique Paths Visualizer
 
-An interactive web application that visualizes the **Unique Paths II** dynamic programming problem with obstacle support.
+A visual, interactive React application to explore **dynamic programming (DP)** and **shortest path algorithms**. Easily toggle between **Leetcode-style Unique Paths II** and **Dijkstra's shortest path**, build your own grid, and visualize the paths with animations.
 
-## ✨ Features
+### 🌐 Live Demo
 
-- **🖱️ Click & Drag**: Paint obstacles by clicking and dragging across the grid
-- **🎬 Path Animation**: Watch random valid paths being traced step-by-step
-- **📊 DP Values**: Toggle display of dynamic programming computation values
-- **📱 Responsive Design**: Works on desktop and mobile devices
-- **⚡ Real-time Updates**: Instant recalculation as you modify the grid
-
-## 🚀 Demo
-
-Visit the live demo: [https://GreenMarioh.github.io/unique-paths-visualizer/](https://GreenMarioh.github.io/unique-paths-visualizer/)
-
-## 🎮 How to Use
-
-1. **Grid Setup**: Adjust rows and columns using the input fields
-2. **Add Obstacles**: Click and drag to paint red obstacle cells
-3. **Remove Obstacles**: Drag over existing obstacles to erase them
-4. **Animate Path**: Click "Show Random Path" to see a path traced with smooth animation
-5. **View DP Values**: Toggle "Show Path Counts" to see the computed values
-
-## 🧮 Algorithm
-
-This visualizer demonstrates the **Unique Paths II** problem:
-
-- **Input**: An `m × n` grid with obstacles
-- **Goal**: Count unique paths from top-left to bottom-right
-- **Constraints**: Can only move right or down, obstacles block paths
-- **Solution**: Dynamic programming with obstacle handling
-
-## 🛠️ Technical Details
-
-- **Frontend**: React with Hooks
-- **Styling**: Tailwind CSS
-- **Animations**: CSS transitions with JavaScript timing
-- **Deployment**: GitHub Pages
-
-## 📜 License
-
-MIT License - feel free to use this code for educational purposes.
+> _https://greenmarioh.github.io/unique-paths-visualizer/_
 
 ---
 
-_Enhanced visualization of classic dynamic programming concept._
+## 📌 Features
+
+- 🧠 **Unique Paths II (DP)**: Visualizes total valid paths using a dynamic programming table. Implements logic based on [LeetCode - Unique Paths II](https://leetcode.com/problems/unique-paths-ii/description/).
+- 📏 **Shortest Path Mode**: Uses a modified Dijkstra’s algorithm that supports 8-directional movement (diagonals included) for pathfinding.
+- 👡️ **Interactive Grid Editor**:
+  - Click or drag to add/remove obstacles.
+  - In shortest path mode, drag Start (🟩) and End (🟦) nodes freely.
+- 🧮 **DP Table Rendering**: Optionally display the number of ways to reach each cell in unique paths mode.
+- 🔁 **Path Animation**: Each cell in a computed path lights up sequentially to demonstrate traversal order.
+- 📀 **Resizable Grid**: Supports grids from 1×1 to 12×12 with smooth resets and state preservation.
+- ⚡ Fast and reactive UI thanks to React + Vite + Tailwind.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/GreenMarioh/unique-paths-visualizer.git
+cd unique-paths-visualizer
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Start Development Server
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+Then open: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🛠️ Built With
+
+- ⚛️ **[React](https://reactjs.org/)** — UI component library
+- 🔆 **[TypeScript](https://www.typescriptlang.org/)** — Typed JavaScript for safety and tooling
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** — Utility-first CSS framework
+- ⚡ **[Vite](https://vitejs.dev/)** — Lightning-fast build tool and dev server
+- 📦 **Modular Architecture** — Reusable components (GridCell, InfoCard, etc.)
+- 📁 **Single-File Visualizer Component** — Main logic lives in `UniquePathsVisualizer.tsx` for simplicity and portability
+
+---
+
+## 📄 License
+
+MIT License. Feel free to fork and improve!
+
+---
+
+## 🚇️ Author
+
+Created with ❤️ by [@GreenMarioh](https://github.com/GreenMarioh)
+
+👉 View the source code:  
+🔗 [https://github.com/GreenMarioh/unique-paths-visualizer](https://github.com/GreenMarioh/unique-paths-visualizer)
