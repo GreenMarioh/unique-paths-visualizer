@@ -10,13 +10,15 @@ A visual, interactive React application to explore **dynamic programming (DP)** 
 
 ## 📌 Features
 
-- 🧠 **Unique Paths II (DP)**: Based on [LeetCode - Unique Paths II](https://leetcode.com/problems/unique-paths-ii/description/), visualize the total number of paths avoiding obstacles.
-- 📏 **Shortest Path Mode**: Visualize the shortest path between two draggable points using **Dijkstra's Algorithm** with 8-directional movement.
-- 📆 Animated step-by-step path traversal
-- 🧱 Click-and-drag to create obstacles on the grid
-- 🔄 Adjustable grid size (up to 12×12)
-- 👁️ Option to show/hide DP table values
-- 💡 Clear, responsive UI with Tailwind CSS
+- 🧠 **Unique Paths II (DP)**: Visualizes total valid paths using a dynamic programming table. Implements logic based on [LeetCode - Unique Paths II](https://leetcode.com/problems/unique-paths-ii/description/).
+- 📏 **Shortest Path Mode**: Uses a modified Dijkstra’s algorithm that supports 8-directional movement (diagonals included) for pathfinding.
+- 👡️ **Interactive Grid Editor**:
+  - Click or drag to add/remove obstacles.
+  - In shortest path mode, drag Start (🟩) and End (🟦) nodes freely.
+- 🧮 **DP Table Rendering**: Optionally display the number of ways to reach each cell in unique paths mode.
+- 🔁 **Path Animation**: Each cell in a computed path lights up sequentially to demonstrate traversal order.
+- 📀 **Resizable Grid**: Supports grids from 1×1 to 12×12 with smooth resets and state preservation.
+- ⚡ Fast and reactive UI thanks to React + Vite + Tailwind.
 
 ---
 
@@ -45,22 +47,18 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
-
----
-
-## 🖼️ Screenshots
-
-> _You can add screenshots or gifs here showcasing the DP mode, dragging Start/End, etc._
+Then open: [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🛠️ Built With
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Vite](https://vitejs.dev/)
+- ⚛️ **[React](https://reactjs.org/)** — UI component library
+- 🔆 **[TypeScript](https://www.typescriptlang.org/)** — Typed JavaScript for safety and tooling
+- 🎨 **[Tailwind CSS](https://tailwindcss.com/)** — Utility-first CSS framework
+- ⚡ **[Vite](https://vitejs.dev/)** — Lightning-fast build tool and dev server
+- 📦 **Modular Architecture** — Reusable components (GridCell, InfoCard, etc.)
+- 📁 **Single-File Visualizer Component** — Main logic lives in `UniquePathsVisualizer.tsx` for simplicity and portability
 
 ---
 
@@ -70,7 +68,7 @@ MIT License. Feel free to fork and improve!
 
 ---
 
-## 🙇‍♂️ Author
+## 🚇️ Author
 
 Created with ❤️ by [@GreenMarioh](https://github.com/GreenMarioh)
 
