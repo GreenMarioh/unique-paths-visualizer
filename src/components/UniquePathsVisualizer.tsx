@@ -207,7 +207,7 @@ export default function UniquePathsVisualizer() {
   const [currentStep, setCurrentStep] = useState(-1);
   const [isDragging, setIsDragging] = useState(false);
   const [dragMode, setDragMode] = useState<string | null>(null);
-  const [shortestMode, setShortestMode] = useState(false);
+  const [shortestMode, setShortestMode] = useState(true);
   const [start, setStart] = useState([0, 0]);
   const [end, setEnd] = useState([5, 5]);
 
@@ -549,10 +549,24 @@ export default function UniquePathsVisualizer() {
               Pathfinding Visualizer
             </h1>
             <p className="text-gray-400">
-              {shortestMode
-                ? "Dijkstra's Shortest Path Algorithm"
-                : "Unique Paths DP"}
-            </p>
+  {shortestMode
+    ? "Dijkstra's Shortest Path Algorithm"
+    : (
+        <>
+          Unique Paths DP (
+          <a
+            href="https://leetcode.com/problems/unique-paths-ii/description/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-300 transition-colors duration-200"
+          >
+            LeetCode Problem
+          </a>
+          )
+        </>
+      )}
+</p>
+
           </div>
 
           {/* Controls */}
@@ -678,6 +692,33 @@ export default function UniquePathsVisualizer() {
           <InstructionsCard />
         </div>
       </div>
+   <footer
+  className="text-center mt-12 text-sm text-gray-500 
+             flex flex-col md:flex-row items-center justify-center gap-2"
+>
+  <a
+    href="https://github.com/GreenMarioh/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 underline hover:text-gray-300 
+               transition-colors duration-200"
+  >
+    🐙 <span>Created by @GreenMarioh</span>
+  </a>
+
+  <a
+    href="https://github.com/GreenMarioh/unique-paths-visualizer/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-1 underline hover:text-gray-300 
+               transition-colors duration-200"
+  >
+    🥀 <span>Source Code</span>
+  </a>
+</footer>
+
+
     </div>
+    
   );
 }
